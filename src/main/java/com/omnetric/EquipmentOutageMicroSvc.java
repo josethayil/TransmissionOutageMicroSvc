@@ -6,20 +6,17 @@ import org.springframework.context.ApplicationContext;
 
 import org.springframework.context.ApplicationContextAware;
 
-import com.omnetric.transmissionoutage.outage.Outage;
-import com.omnetric.transmissionoutage.outage.OutageService;
-import com.omnetric.transmissionoutage.outagedequipment.Equipment;
-import com.omnetric.transmissionoutage.outagedequipment.EquipmentService;
 
 @SpringBootApplication
 public class EquipmentOutageMicroSvc implements ApplicationContextAware {
 	
 	
-	     private ApplicationContext ctx;
-	 
+		 private ApplicationContext ctx;	     
+	     
 	     public void setApplicationContext(ApplicationContext context) {
 	    	 this.ctx=context;
 	    	 
+	    	 /*
 	    	 String arr[] =   ctx.getBeanNamesForType(OutageService.class);
 	    	 System.out.println(">>>>>>>>>>>>>>>>>>>>>>>" + arr.length);
 	    	 OutageService svc =   (OutageService)ctx.getBean(OutageService.class);
@@ -30,7 +27,7 @@ public class EquipmentOutageMicroSvc implements ApplicationContextAware {
 	    	 EquipmentService eqsvc =   (EquipmentService)ctx.getBean(EquipmentService.class);
 	    	 Equipment eq = new Equipment("Eq123","Caribou Switch 65","ACLINESEG","Otg123" );
 	    	 eqsvc.addEquipment(eq);
-	    	 
+	    	 */
 	    	 
 	    	 
 	     }
@@ -43,4 +40,7 @@ public class EquipmentOutageMicroSvc implements ApplicationContextAware {
 	    	 System.out.println("----------------------------------------------");
 		
 	     }
+	     
+	    
+	     
 }

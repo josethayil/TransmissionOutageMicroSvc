@@ -17,32 +17,32 @@ public class EquipmentController {
 	@Autowired
 	private EquipmentService equipmentService;
 	
-	@RequestMapping("/outages/{mrid}/equipments")
+	@RequestMapping("/api/outages/{mrid}/equipments")
 	public List<Equipment> getAllEquipments(@PathVariable String mrid) {
 		return equipmentService.getAllEquipments(mrid);
 				
 	}
 	
-	@RequestMapping("/outages/{id}/courses/{mrid}")
+	@RequestMapping("/api/outages/{id}/courses/{mrid}")
 	public Equipment getAnEquipment(@PathVariable String mrid) {
 		return equipmentService.getEquipment(mrid);
 	}
 
-	@RequestMapping(method = RequestMethod.POST, value="/outages/{mRID}/equipments")
+	@RequestMapping(method = RequestMethod.POST, value="/api/outages/{mRID}/equipments")
 	public void addEquipment(@RequestBody Equipment equipment, @PathVariable String mRID) {
 		java.sql.Date sqlDate = new java.sql.Date(new java.util.Date().getTime());
 		equipment.setOutage(new Outage(mRID, "", "",sqlDate,sqlDate));
 		equipmentService.addEquipment(equipment);
 	}
 	
-	@RequestMapping(method = RequestMethod.PUT, value="/outages/{outageId}/equipments/{mRID}")
+	@RequestMapping(method = RequestMethod.PUT, value="/api/outages/{outageId}/equipments/{mRID}")
 	public void updateEquipment(@RequestBody Equipment equipment, @PathVariable String outageId, @PathVariable String mRID) {
 		java.sql.Date sqlDate = new java.sql.Date(new java.util.Date().getTime());
 		equipment.setOutage(new Outage(outageId, "", "",sqlDate,sqlDate));
 		equipmentService.updateEquipment(equipment);
 	}
 	
-	@RequestMapping(method = RequestMethod.DELETE, value="/outages/{outageId}/equipments/{mRID}")
+	@RequestMapping(method = RequestMethod.DELETE, value="/api/outages/{outageId}/equipments/{mRID}")
 	public void deleteEquipment(@PathVariable String mRID) {
 		equipmentService.deleteEquipment(mRID);
 	}
