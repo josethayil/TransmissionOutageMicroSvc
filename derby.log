@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Thu Jan 18 21:06:21 CST 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0161-0c61-a5f2-000019ef17d8 
-on database directory memory:D:\Users\mspmajo3\Documents\Workspace_Spring\TransmissionOutageMicroSvc\testdb with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 
+Fri Jan 19 11:54:54 CST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0161-0f8f-236c-00001a6a15d0 
+on database directory memory:D:\Users\mspmajo3\Documents\GitHub\TransmissionOutageMicroSvc\testdb with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 
 Loaded from file:/C:/Users/mspmajo3/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_144-b01
-user.dir=D:\Users\mspmajo3\Documents\Workspace_Spring\TransmissionOutageMicroSvc
+user.dir=D:\Users\mspmajo3\Documents\GitHub\TransmissionOutageMicroSvc
 os.name=Windows 7
 os.arch=amd64
 os.version=6.1
